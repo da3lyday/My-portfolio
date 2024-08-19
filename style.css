@@ -283,13 +283,14 @@ body {
     text-align: left;
     font-size: 3em;
     font-weight: bold;
+    margin-top: 1em;
 }
 
 .p2 {
     font-size: 35px;
     background-color: #FFC6C6;
     border-radius: 20px;
-    margin-right: 5em;
+    margin-right: 4.5em;
     padding-left: 1em;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -298,7 +299,7 @@ body {
 
 .portfolio-ad {
     background-color: #ffeac1;
-    margin-top: 15em;
+    margin-top: 7em;
     text-align: center;
     padding: 3.8em;
     margin-left: 2em;
@@ -307,6 +308,58 @@ body {
     border: 10px solid #BAABDA;
 }
 
+.work {
+    background-color: #D6E5FA;
+    background-size: cover;
+}
+
+.workcontainer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    margin: 5rem 0;
+    gap: 3rem;
+    row-gap: 5rem;
+}
+
+.work-card {
+    height: 560px;
+    width: 450px;
+    background-color: #F8EDE3;
+    backdrop-filter: blur(30px);
+    border: 10px solid #BAABDA;
+    border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px #587194;
+    transition: 0.4s ease;
+}
+
+.work-card:hover {
+    box-shadow: 0 0 25px #587194,
+                0 0 50px #587194;
+    transform: scale(1.02);
+}
+
+.work-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.work-card h3 {
+    font-size: 4em;
+}
+
+.work-card {
+    font-size: 1em;
+}
 .p3 {
     position: relative;
     font-size: 50px;
@@ -357,12 +410,14 @@ body {
     color: white;
     margin-top: 2em;
     border-radius: 20px;
-
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 .Certificate-topic {
     font-size: 3em;
     text-align: center;
+
 }
 
 .sliderContainer {
@@ -384,6 +439,8 @@ body {
     justify-content: center;
     align-items: center;
     transition: 1s;
+    animation: scroll 20s alternate infinite;
+    animation-timing-function: linear;
 }
 
 .slide_div {
@@ -401,6 +458,7 @@ body {
     transition: 0.7s;
     border-radius: 20px;
 }
+
 
 .button {
     position: absolute;
@@ -497,6 +555,16 @@ body {
 #slider7:target~.imgContainer {
     left: -60%;
 }
+
+@keyframes scroll {
+    0% {
+        transform: translateX(30%);
+    }
+    100% {
+        transform: translateX(10%);
+    }
+}
+
 
 footer {
     background-color: rgb(255, 108, 108);

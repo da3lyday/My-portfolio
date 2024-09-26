@@ -11,258 +11,309 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
   <!-- Nav Section -->
   <nav class="nav-container">
-    <div id="logo" class="logo-container">
-      <a href="#">My portfolio</a>
+    <div class="logo-container">
+      <a href="#my-portfolio">My portfolio</a>
     </div>
     <ul class="menu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#activity">Activity</a></li>
-      <li><a href="#certificate">Certificate</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="menu-bnt"><a href="#about">About</a></li>
+      <li class="menu-bnt"><a href="#work">Work</a></li>
+      <li class="menu-bnt"><a href="#activity">Activity</a></li>
+      <li class="menu-bnt"><a href="#certificate">Certificate</a></li>
+      <li class="menu-bnt"><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <ul class="dropdown_menu">
+      <li class="menu-bnt"><a href="#about">About</a></li>
+      <li class="menu-bnt"><a href="#work">Work</a></li>
+      <li class="menu-bnt"><a href="#activity">Activity</a></li>
+      <li class="menu-bnt"><a href="#certificate">Certificate</a></li>
+      <li class="menu-bnt"><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.className = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+  </script>
+
   <!-- Nav Section -->
-
-  <!-- Banner start -->
-  <section class="banner-container">
-    <div class="banner-info">
-      <div class="fade-in-fade-out">
-        <h1>Hello!! :3</h1>
-      </div>
-      <h1>My name is <span style="color: #FFEEAD;">Apichaya Waresesai</span></h1>
-      <!-- <p1>Apichaya Waresesai</p1> -->
-      <br>
-      <p2>I'm a self-taught programmer,and I created this website to showcase my projects and passion for computer
-        science!!</p2>
-    </div>
-  </section>
-  <!-- banner end -->
-
-  <section class="about-container" id="about">
-    <h1 class="about-topic">About me</h1>
-    <div class="about">
-      <div class="about-left-container">
-        <p class="p1">Name</p>
-        <!-- <p class="p2">Apichaya Waresesai</p> -->
-        <p class="p1">Nickname</p>
-        <p class="p2">Sunday</p>
-        <p class="p1">Date of birth</p>
-        <!-- <p class="p2">23/04/2006</p> -->
-        <p class="p1">Address</p>
-        <!-- <p class="p2">Rama 2, Bangkok, Thailand</p> -->
-        <p class="p1">Languages</p>
-        <p class="p2">Thai, English</p>
-        <p class="p1">Education</p>
-        <!-- <p class="p2">Suankularb Wittayalai Thonburi School</p> -->
-        <p class="p1">Phone number</p>
-        <!-- <p class="p2">092-725-6777</p> -->
-      </div>
-      <div class="about-right-container">
-        <img class="myselfimg" src="myself.png">
-        <div class="about-right">
-          <p class="p1">Skill & Abilities</p>
-          <p class="p2">HTML, CSS, Basic Python, Basic Premier Pro</p>
-          <p class="p1">Soft skill</p>
-          <p class="p2">Fast learning, Calm, Patient, Easy going</p>
-          <p class="p1">Hobbies</p>
-          <p class="p2">Singing, Reading, Watching movie</p>
+  <div class="container">
+    <!-- Banner start -->
+    <section class="banner-container">
+      <div class="banner-info">
+        <div class="fade-in-fade-out">
+          <h1>Hello!! :3</h1>
         </div>
+        <h1>My name is <span style="color: #FFEEAD;">Apichaya Waresesai</span></h1>
+        <!-- <p1>Apichaya Waresesai</p1> -->
+        <br>
+        <p2>I'm a self-taught programmer,and I created this website to showcase my projects and passion for computer
+          science!!</p2>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- banner end -->
 
-  <section class="portfolio-ad">
-    <div>
-      <p class="p3">You can view my portfolio here</p>
-      <i class="ri-arrow-right-fill"></i>
-      <!-- <button class="button1"
-        onclick="location.href='https://www.canva.com/design/DAGJ-LKK28I/WXHh-f5nG3GDGPo30gyp0A/view?utm_content=DAGJ-LKK28I&utm_campaign=designshare&utm_medium=link&utm_source=editor'">
-        My Portfolio
-      </button> -->
-    </div>
-  </section>
-
-  <section class="work" id="work">
-    <h1 class="worktopic">My work</h1>
-    <p class=p4>These are the projects I’ve created through my own learning.</p>
-    <div class="work-container">
-
-      <div class="work-card"><img src="https://i.pinimg.com/564x/ba/2f/5a/ba2f5aa963feb131519b1d6d16232124.jpg" alt="">
-        <h3>Work 1</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-
-      <div class="work-card">
-        <img src="https://i.pinimg.com/564x/3d/9e/a9/3d9ea9d8fd9c94d2ac716e80ac6c801a.jpg" alt="">
-        <h3>Work 2</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-
-      <div class="work-card">
-        <img src="https://i.pinimg.com/564x/9a/8f/26/9a8f26744cc5ecfe68eca687c6b0b0dc.jpg" alt="">
-        <h3>Work 3</h3>
-        <p class="p5">velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis
-          facere!</p>
-      </div>
-
-      <div class="work-card">
-        <img src="https://i.pinimg.com/564x/83/85/1a/83851aaa1a0d060b7b60987709558137.jpg" alt="">
-        <h3>Work 4</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-
-      <div class="work-card">
-        <img src="https://i.pinimg.com/564x/59/38/81/593881cc0f6b3261514f9fdd103ae1ff.jpg" alt="">
-        <h3>Work 5</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-
-      <div class="work-card">
-        <img src="https://i.pinimg.com/564x/59/38/81/593881cc0f6b3261514f9fdd103ae1ff.jpg" alt="">
-        <h3>Work 6</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-    </div>
-  </section>
-
-  <!---------- activity start ---------->
-  <section class="activity" id="activity">
-    <h1 class="activity-topic">Activity</h1>
-    <p class=p4>These are the events and projects I’ve participated in.</p>
-    <div class="activity-container">
-
-      <div class="activity-card"><img src="https://i.pinimg.com/564x/ba/2f/5a/ba2f5aa963feb131519b1d6d16232124.jpg"
-          alt="">
-        <h3>Work 1</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-
-      <div class="activity-card">
-        <img src="https://i.pinimg.com/564x/3d/9e/a9/3d9ea9d8fd9c94d2ac716e80ac6c801a.jpg" alt="">
-        <h3>Work 2</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-
-      <div class="activity-card">
-        <img src="https://i.pinimg.com/564x/9a/8f/26/9a8f26744cc5ecfe68eca687c6b0b0dc.jpg" alt="">
-        <h3>Work 3</h3>
-        <p class="p5">velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis
-          facere!</p>
-      </div>
-
-      <div class="activity-card">
-        <img src="https://i.pinimg.com/564x/83/85/1a/83851aaa1a0d060b7b60987709558137.jpg" alt="">
-        <h3>Work 4</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-
-      <div class="activity-card">
-        <img src="https://i.pinimg.com/564x/59/38/81/593881cc0f6b3261514f9fdd103ae1ff.jpg" alt="">
-        <h3>Work 5</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-
-      <div class="activity-card">
-        <img src="https://i.pinimg.com/564x/59/38/81/593881cc0f6b3261514f9fdd103ae1ff.jpg" alt="">
-        <h3>Work 6</h3>
-        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis. Ex,
-          corrupti
-          velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!</p>
-      </div>
-    </div>
-  </section>
-
-  <!---------- activity end ---------->
-
-  <section class="Certificate" id="certificate">
-    <h1 class="Certificate-topic">Certificate</h1>
-    <p class="p4">Here are the certificates I’ve earned.</p>
-    <div class="certificate-container">
-      <div class="slider">
-        <div><img class="img-certificate" alt="KMUTT I-dia camp 11" src="certificate/i-dia camp.png">
-          <p class="p10">I-Dia Camp 11 From KMUTT</p>
+    <section class="about-container" id="about">
+      <h1 class="about-topic">About me</h1>
+      <div class="about">
+        <div class="about-left-container">
+          <p class="p1">Name</p>
+          <p class="p2">Apichaya Waresesai</p>
+          <p class="p1">Nickname</p>
+          <p class="p2">Sunday</p>
+          <p class="p1">Date of birth</p>
+          <p class="p2">23/04/2006</p>
+          <p class="p1">Address</p>
+          <p class="p2">Rama 2, Bangkok, Thailand</p>
+          <p class="p1">Languages</p>
+          <p class="p2">Thai, English</p>
+          <p class="p1">Education</p>
+          <p class="p2">Suankularb Wittayalai Thonburi School</p>
+          <p class="p1">Phone number</p>
+          <p class="p2">092-725-6777</p>
         </div>
-        <div><img class="img-certificate" alt="Thai Mooc Chula html css" src="certificate/cu html.jpeg">
-          <p class="p10">Thai Mooc Chula | HTML, CSS for beginners</p>
-        </div>
-        <div><img class="img-certificate" alt="Thai Mooc python for begiiners" src="certificate/pyton.png">
-          <p class="p10">Thai Mooc KMUTT | Python for beginners</p>
-        </div>
-        <div><img class="img-certificate" alt="CHULA Water journey" src="certificate/water journey.png">
-          <p class="p10">Chula | Water journey</p>
-        </div>
-        <div><img class="img-certificate" alt="ศิลปหัตถกรรม" src="certificate/yc.jpg">
-          <p class="p10">ศิลปหัตถกรรม ครั้งที่ 70 | Youth Counselor: YC</p>
-        </div>
-        <div><img class="img-certificate" alt="SPU Business content" src="certificate/spu.png">
-          <p class="p10">SPU | Business content creator young talent #2</p>
-        </div>
-        <div><img class="img-certificate" alt="SKT Open house" src="certificate/skt open house.png">
-          <p class="p10">SKT | Open house</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="contact" id="contact">
-    <div class="contact-container">
-      <div class="contact-left">
-        <div class="contact-left-info">
-          <h class="contact-topic">Contact</h>
-          <p class="p9">Address</p>
-          <!-- <p class="p8">Rama 2, Bangkok, Thailand</p> -->
-          <h class="p9">Email</h>
-          <!-- <p class="p8">Sunday19134@gmail.com</p> -->
-          <p class="p9">Phone number</p>
-          <!-- <p class="p8">+66 092-725-6777</p> -->
-          <div class="icon-contact">
-            <!-- <a href="https://github.com/da3lyday" target="_blank"> -->
-              <img src="icon/github.png" alt="Github">
-            </a>
-            <!-- <a href="https://www.instagram.com/da3lyday/" target="_blank"> -->
-              <img src="icon/instagram (2).png" alt="instagram">
-            </a>
-            <!-- <a href="https://line.me/ti/p/ZqZljffCqP" target="_blank"> -->
-              <img src="icon/line.png" alt="Line">
-            </a>
-            <!-- <a href="https://www.facebook.com/sunday.jar.96" target="_blank"> -->
-              <img src="icon/facebook (2).png" alt="Facebook"></a>
+        <div class="about-right-container">
+          <img class="myselfimg" src="myself.png">
+          <div class="about-right">
+            <p class="p1">Skill & Abilities</p>
+            <p class="p2">HTML, CSS, Basic Python, Basic Premier Pro</p>
+            <p class="p1">Soft skill</p>
+            <p class="p2">Fast learning, Calm, Patient, Easy going</p>
+            <p class="p1">Hobbies</p>
+            <p class="p2">Singing, Reading, Watching movie</p>
           </div>
         </div>
       </div>
-      <div class="contact-right">
-        <h class="h4">About this project</h>
-        <p class="p7">This project is something I’ve worked on to show my effort and interest in coding.</p>
-        <p class="p7">It’s been built over the past two months, using what I’ve learned during that time.</p>
+    </section>
+
+    <section class="portfolio-ad" id="my-portfolio">
+      <div>
+        <p class="p3">You can view my portfolio here</p>
+        <a class="button1"
+          href='https://www.canva.com/design/DAGJ-LKK28I/WXHh-f5nG3GDGPo30gyp0A/view?utm_content=DAGJ-LKK28I&utm_campaign=designshare&utm_medium=link&utm_source=editor'" target="
+          _blank">
+          My Portfolio
+        </a>
       </div>
-    </div>
-    <div class="footer">
-    <hr class="hr">
-    <p class="p9">Copyright © 2022 Apichaya Waresesai. All rights reserved.</p>
-    </div>
-  </section>
-  </main>
+    </section>
+
+    <section class="work" id="work">
+      <h1 class="worktopic">My work</h1>
+      <p class=p4>These are the projects I’ve created through my own learning.</p>
+      <div class="work-container">
+
+        <div class="work-card"><img src="https://i.pinimg.com/564x/ba/2f/5a/ba2f5aa963feb131519b1d6d16232124.jpg"
+            alt="">
+          <h3>Work 1</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+
+        <div class="work-card">
+          <img src="https://i.pinimg.com/564x/3d/9e/a9/3d9ea9d8fd9c94d2ac716e80ac6c801a.jpg" alt="">
+          <h3>Work 2</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+
+        <div class="work-card">
+          <img src="https://i.pinimg.com/564x/9a/8f/26/9a8f26744cc5ecfe68eca687c6b0b0dc.jpg" alt="">
+          <h3>Work 3</h3>
+          <p class="p5">velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem
+            perferendis
+            facere!</p>
+        </div>
+
+        <div class="work-card">
+          <img src="https://i.pinimg.com/564x/83/85/1a/83851aaa1a0d060b7b60987709558137.jpg" alt="">
+          <h3>Work 4</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+
+        <div class="work-card">
+          <img src="https://i.pinimg.com/564x/59/38/81/593881cc0f6b3261514f9fdd103ae1ff.jpg" alt="">
+          <h3>Work 5</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+
+        <div class="work-card">
+          <img src="https://i.pinimg.com/564x/59/38/81/593881cc0f6b3261514f9fdd103ae1ff.jpg" alt="">
+          <h3>Work 6</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!---------- activity start ---------->
+    <section class="activity" id="activity">
+      <h1 class="activity-topic">Activity</h1>
+      <p class=p4>These are the events and projects I’ve participated in.</p>
+      <div class="activity-container">
+
+        <div class="activity-card"><img src="https://i.pinimg.com/564x/ba/2f/5a/ba2f5aa963feb131519b1d6d16232124.jpg"
+            alt="">
+          <h3>Work 1</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+
+        <div class="activity-card">
+          <img src="https://i.pinimg.com/564x/3d/9e/a9/3d9ea9d8fd9c94d2ac716e80ac6c801a.jpg" alt="">
+          <h3>Work 2</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+
+        <div class="activity-card">
+          <img src="https://i.pinimg.com/564x/9a/8f/26/9a8f26744cc5ecfe68eca687c6b0b0dc.jpg" alt="">
+          <h3>Work 3</h3>
+          <p class="p5">velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem
+            perferendis
+            facere!</p>
+        </div>
+
+        <div class="activity-card">
+          <img src="https://i.pinimg.com/564x/83/85/1a/83851aaa1a0d060b7b60987709558137.jpg" alt="">
+          <h3>Work 4</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+
+        <div class="activity-card">
+          <img src="https://i.pinimg.com/564x/59/38/81/593881cc0f6b3261514f9fdd103ae1ff.jpg" alt="">
+          <h3>Work 5</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+
+        <div class="activity-card">
+          <img src="https://i.pinimg.com/564x/59/38/81/593881cc0f6b3261514f9fdd103ae1ff.jpg" alt="">
+          <h3>Work 6</h3>
+          <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae corrupti ea quae dolore nobis.
+            Ex,
+            corrupti
+            velit, deserunt dolores mollitia est earum minima vitae ratione fugit nesciunt quidem perferendis facere!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!---------- activity end ---------->
+
+    <section class="Certificate" id="certificate">
+      <h1 class="Certificate-topic">Certificate</h1>
+      <p class="p4">Here are the certificates I’ve earned.</p>
+      <div class="certificate-container">
+        <div class="slider">
+          <div><img class="img-certificate" alt="KMUTT I-dia camp 11" src="certificate/i-dia camp.png">
+            <p class="p10">I-Dia Camp 11 From KMUTT</p>
+          </div>
+          <div><img class="img-certificate" alt="Thai Mooc Chula html css" src="certificate/cu html.jpeg">
+            <p class="p10">Thai Mooc Chula | HTML, CSS for beginners</p>
+          </div>
+          <div><img class="img-certificate" alt="Thai Mooc python for begiiners" src="certificate/pyton.png">
+            <p class="p10">Thai Mooc KMUTT | Python for beginners</p>
+          </div>
+          <div><img class="img-certificate" alt="CHULA Water journey" src="certificate/water journey.png">
+            <p class="p10">Chula | Water journey</p>
+          </div>
+          <div><img class="img-certificate" alt="ศิลปหัตถกรรม" src="certificate/yc.jpg">
+            <p class="p10">ศิลปหัตถกรรม ครั้งที่ 70 | Youth Counselor: YC</p>
+          </div>
+          <div><img class="img-certificate" alt="SPU Business content" src="certificate/spu.png">
+            <p class="p10">SPU | Business content creator young talent #2</p>
+          </div>
+          <div><img class="img-certificate" alt="SKT Open house" src="certificate/skt open house.png">
+            <p class="p10">SKT | Open house</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <div class="contact-left">
+          <div class="contact-left-info">
+            <h class="contact-topic">Contact</h>
+            <p class="p9">Address</p>
+            <p class="p8">Rama 2, Bangkok, Thailand</p>
+            <h class="p9">Email</h>
+            <p class="p8">Sunday19134@gmail.com</p>
+            <p class="p9">Phone number</p>
+            <p class="p8">+66 092-725-6777</p>
+            <div class="icon-contact">
+              <a href="https://github.com/da3lyday" target="_blank">
+                <img src="icon/github.png" alt="Github">
+              </a>
+              <a href="https://www.instagram.com/da3lyday/" target="_blank">
+                <img src="icon/instagram (2).png" alt="instagram">
+              </a>
+              <a href="https://line.me/ti/p/ZqZljffCqP" target="_blank">
+                <img src="icon/line.png" alt="Line">
+              </a>
+              <a href="https://www.facebook.com/sunday.jar.96" target="_blank">
+                <img src="icon/facebook (2).png" alt="Facebook"></a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <h class="h4">About this project</h>
+          <p class="p7">This project is something I’ve worked on to show my effort and interest in coding.</p>
+          <p class="p7">It’s been built over the past two months, using what I’ve learned during that time.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <hr class="hr">
+        <p class="p9">Copyright © 2022 Apichaya Waresesai. All rights reserved.</p>
+      </div>
+    </section>
+    </main>
+  </div>
 </body>

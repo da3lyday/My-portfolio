@@ -337,7 +337,7 @@ body {
 }
 
 .myselfimg {
-    width: 100%;
+    width: 80%;
     border-radius: 8%;
     border-style: solid;
     border-color: #F7B5CA;
@@ -444,7 +444,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 3em;
+    padding: 1.5em;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 5px #B0578D;
@@ -532,7 +532,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 3em;
+    padding: 1.5em;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 5px #B0578D;
